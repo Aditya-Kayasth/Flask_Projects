@@ -83,6 +83,7 @@
         .container h2 {
             color: #3b82f6;
             margin-bottom: 10px;
+            font-size: 1.7rem
         }
 
         /* About Us Section */
@@ -113,11 +114,12 @@
 
         .job h3 {
             margin: 0 0 10px 0;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
         .job p {
             margin: 5px 0;
+            
         }
 
         .job button {
@@ -186,33 +188,12 @@
     <div class="container job-listings" id="job-listings">
         <h2>Job Listings</h2>
 
-        <div class="job">
-            <div>
-                <h3>Software Developer</h3>
-                <p>Location: Remote | Full-time</p>
-                <p>Join our team to build cutting-edge software solutions and grow your career.</p>
-            </div>
-            <button>Apply</button>
-        </div>
+        {% for job in jobs %}
 
-        <div class="job">
-            <div>
-                <h3>Data Analyst</h3>
-                <p>Location: Mumbai | Full-time</p>
-                <p>Analyze data trends and help us shape data-driven decisions.</p>
-            </div>
-            <button>Apply</button>
-        </div>
+            {% include 'jobslist.html' %}
 
-        <div class="job">
-            <div>
-                <h3>UI/UX Designer</h3>
-                <p>Location: Bengaluru | Contract</p>
-                <p>Create seamless and beautiful user experiences for our applications.</p>
-            </div>
-            <button>Apply</button>
-        </div>
-    </div>
+        {% endfor %}
+
 
     <!-- Footer -->
     <footer id="contact-us">
